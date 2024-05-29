@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir> <cache-dir>
 
-# fail fast
-set -e
-
-BUILD_DIR=$1
-
-echo '-----> Rewriting libffi.pc'
-mkdir -p $BUILD_DIR/.heroku/vendor/lib/pkg-config
-sed -e "s%/usr%/app/.apt/usr%" -e "s%Cflags:%Cflags: -I\${includedir}/x86_64-linux-gnu%" -e "s%Libs:%Libs: -L\${libdir}%" < $BUILD_DIR/.apt/usr/lib/pkgconfig/libffi.pc > $BUILD_DIR/.heroku/vendor/lib/pkg-config/libffi.pc
-mkdir -p $BUILD_DIR/.heroku/vendor/lib
-cp $BUILD_DIR/.apt/usr/lib/libffi* $BUILD_DIR/.heroku/vendor/lib
+# Install python3-dev package
+apt-get update
+apt-get install -y python3-dev
