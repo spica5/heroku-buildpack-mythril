@@ -2,7 +2,11 @@
 
 # Install python3-dev package
 set -e
+echo "-----> Updating APT sources"
 apt-get update
+echo "-----> Installing software-properties-common"
+echo "-----> Adding repository"
 apt install software-properties-common
 add-apt-repository -y ppa:ethereum/ethereum
+echo "-----> Updating APT sources again"
 apt-get update
