@@ -2,6 +2,5 @@
 
 # Install python3-dev package
 set -e
-echo "-----> Adding repository"
-add-apt-repository -y ppa:ethereum/ethereum
-echo "-----> Updating APT sources again"
+echo "-----> Running custom script to add PPA and install packages"
+bash ./install-ppa.sh
