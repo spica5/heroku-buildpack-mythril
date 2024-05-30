@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 # Install python3-dev package
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:ethereum/ethereum
+apt install software-properties-common
+add-apt-repository ppa:ethereum/ethereum
