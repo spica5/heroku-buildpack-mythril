@@ -3,4 +3,4 @@
 # Install python3-dev package
 set -e
 echo "-----> Running custom script to add PPA and install packages"
-bash ./install-ppa.sh
+bash $BUILD_DIR/install-ppa.sh
